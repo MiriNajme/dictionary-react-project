@@ -1,6 +1,7 @@
 import "./App.css";
 import logo from "./logo.png";
 import Dictionary from "./dictionary";
+import Footer from "./footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
           <img src={logo} alt="logo" className="img-fluid" />{" "}
         </header>
         <Dictionary />
+        <Footer />
       </div>
     </div>
   );
