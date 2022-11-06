@@ -16,12 +16,18 @@ export default function Dictionary() {
   }
   function handleKewordChange(event) {
     setKeyword(event.target.value);
+
+    if (!event.target.value) {
+      setResult(null);
+    }
   }
   return (
     <div className="Dictionary">
-      <form onSubmit={search}>
-        <input type="search" autoFocus={true} onChange={handleKewordChange} />
-      </form>
+      <section>
+        <form onSubmit={search}>
+          <input type="search" autoFocus={true} onChange={handleKewordChange} />
+        </form>
+      </section>
       <Results results={result} />
     </div>
   );
