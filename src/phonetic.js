@@ -9,7 +9,7 @@ export default function Phonetic(props) {
   const audio = new Audio(props.phonetic.audio);
   const togglePlay = () => {
     setPlay(true);
-    audio.play();
+    play ? audio.play() : audio.pause();
   };
 
   return (

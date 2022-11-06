@@ -7,7 +7,6 @@ export default function Results(props) {
     if (phonetic?.text?.length && phonetic?.audio?.length) {
       return <Phonetic phonetic={phonetic} />;
     }
-
     return null;
   };
   if (props.results) {
