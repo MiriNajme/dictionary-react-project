@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+import "./phonetics.css";
 
 export default function Phonetic(props) {
   console.log(props.phonetic);
@@ -14,13 +15,10 @@ export default function Phonetic(props) {
 
   return (
     <div className="phonetic">
-      {props.phonetic.text}
-      <span
-        style={{ cursor: "pointer", marginLeft: "5px" }}
-        onClick={togglePlay}
-      >
-        <FontAwesomeIcon icon={faCirclePlay} />
+      <span style={{ cursor: "pointer", paddingRight: "5px" }}>
+        <FontAwesomeIcon icon={faCirclePlay} onClick={togglePlay} />
       </span>
+      <span className="text">{props.phonetic.text}</span>
     </div>
   );
 }
